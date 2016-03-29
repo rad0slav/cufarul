@@ -1,0 +1,14 @@
+{
+  "name": "cufarul",
+  "version": "0.0.1",
+  "description": "Events list application",
+  "dependencies": {
+    "angular": "1.5.3",
+    "body-parser": "^1.15.0",
+    "bootstrap": "3.3.6",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "jquery": "2.2.2"
+  }
+}

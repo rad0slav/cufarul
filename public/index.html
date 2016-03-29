@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="cufarul">
+<head>
+    <title>Cufarul</title>
+
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body ng-controller="EventsController">
+    <div class="container">
+        <div class="panel panel-default" ng-repeat="event in events">
+            <div class="panel-heading">{{event.eventName}}</div>
+            <div class="panel-body">
+                <div style="float: left">
+                    <img src="{{event.venueProfilePicture}}">
+                </div>
+                <div>
+                    {{event.eventDescription}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="scripts/events/eventsController.js"></script>
+</body>
+</html>
