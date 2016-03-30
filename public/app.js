@@ -1,1 +1,1 @@
-var module = angular.module('cufarul', []);
+var module = angular.module('cufarul', ['ngAnimate', 'ui.bootstrap']);
