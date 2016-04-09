@@ -11,6 +11,7 @@
     "express": "^4.13.4",
     "express-session": "^1.13.0",
     "jquery": "2.2.2",
+    "mongoose": "^4.4.12",
     "ui-bootstrap": "0.0.23"
   }
 }
