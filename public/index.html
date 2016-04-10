@@ -14,34 +14,17 @@
     <!-- Navbar -->
 
 
-    <div class="navbar navbar-default navbar-fixed-top" >
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
+            <!--<div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target=".navbar-inverse-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            </div>
+            </div>-->
             <div class="navbar-collapse collapse navbar-default-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Active</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b
-                                class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Dropdown header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
                 <form class="navbar-form navbar-right">
                     <input type="text" class="form-control col-lg-8" placeholder="Search">
                 </form>
@@ -50,81 +33,32 @@
         </div>
     </div>
 
-
-    <!--<div class="row">
-        <div ng-controller="CarouselController">
-            <div style="height: 305px">
-                <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                    <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                        <img ng-src="{{slide.image}}" style="margin:auto;">
-                        <div class="carousel-caption">
-                            <h4>Slide {{slide.id}}</h4>
-                            <p>{{slide.text}}</p>
-                        </div>
-                    </uib-slide>
-                </uib-carousel>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
-                    <button type="button" class="btn btn-info" ng-click="randomize()">Randomize slides</button>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" ng-model="noWrapSlides">
-                            Disable Slide Looping
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-                    <br />Enter a negative number or 0 to stop the interval.
-                </div>
-            </div>
-        </div>
-    </div>-->
-    
     <div class="row text-center" ng-controller="EventsController">
-            <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="event in events">
-                <div class="thumbnail">
-                    <img ng-src="{{event.venueProfilePicture}}" alt="{{event.eventName}}">
-                    <div class="caption">
-                        <!--<h3>{{event.eventName}}</h3>-->
-                        <!--<div style="overflow: hidden">{{event.eventDescription}}</div>-->
-                        <p>
-                            <a href="#" class="btn btn-primary">Details</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-8 col-md-offset-2 col-sm-6 hero-feature" ng-repeat="event in events">
+            <div class="thumbnail">
+                <img ng-src="{{event.eventCoverPicture}}" alt="{{event.eventName}}">
 
-        </div>
-
-    <div class="row" ng-controller="EventsController">
-        <div class="col-lg-4" ng-repeat="event in events">
-            <div class="panel panel-primary">
-                <div class="panel-heading" style="height: 30px">{{event.eventName}}</div>
-                <div class="panel-body">
-                    <div>
-                        <img src="{{event.venueProfilePicture}}">
-                    </div>
-                    <!--<div style="max-height: 300px; overflow: hidden">
-                        {{event.eventDescription}}
-                    </div>-->
+                <div class="caption">
+                    <h3>{{event.eventName}}</h3>
+                    <!--<div style="overflow: hidden">{{event.eventDescription}}</div>-->
+                    <p>
+                        <a href="#" class="btn btn-primary">Details</a> <a href="#" class="btn btn-default">More
+                        Info</a>
+                    </p>
                 </div>
             </div>
         </div>
+
     </div>
 
-<!--</div>-->
 
-
-<script src="lib/jquery/dist/jquery.js"></script>
-<script src="lib/angular/angular.js"></script>
-<script src="lib/angular-animate/angular-animate.js"></script>
-<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
-<script src="app.js"></script>
-<script src="scripts/events/eventsController.js"></script>
-<script src="scripts/carousel/carouselController.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
+    <script src="app.js"></script>
+    <script src="scripts/events/eventsController.js"></script>
+    <script src="scripts/carousel/carouselController.js"></script>
 </body>
 </html>

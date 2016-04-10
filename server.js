@@ -19,7 +19,7 @@ app.listen(port, function () {
 });
 
 var events = [];
-fs.readFile('events.json', function (error, result) {
+fs.readFile('result.json', function (error, result) {
     if (result) {
         result = JSON.parse(result);
         events = result.events;
@@ -49,7 +49,7 @@ db.on('open', function callback() {
                 });
                 console.log(eventsCollection);
                 if(addFileEvents.length === 0){
-                    addCollection();
+                    addFileEvents();
                     console.log('added');
                 } else {
                     console.log('already exists');
